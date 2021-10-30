@@ -24,22 +24,22 @@ function Calc(operator, a, b) {
     if ( a == "" || b == "" || typeof(a) != 'number' || typeof(b) != 'number' ){
         return "Error"
     } 
-    else if(operator =="plus"){
+    else if(operator =="+"){
         return a + b  
     }  
-    else if(operator =="minus"){
+    else if(operator =="-"){
         return a - b       
     }
-    else if(operator =="multi"){
+    else if(operator =="*"){
         return a * b
     }
-    else if(operator =="divide"){
+    else if(operator =="/"){
         return a / b
     } 
-    else if(operator =="pow"){
+    else if(operator =="**"){
         return Math.pow(a, b)
     }  
-    else if(operator =="dividePlus"){
+    else if(operator =="%"){
         return a % b
     }  
     else{
@@ -47,5 +47,5 @@ function Calc(operator, a, b) {
     }
 }
 
-alert(Calc(operator, +firstNumber, +secondNumber));
+alert(Calc(operator, firstNumber, secondNumber));
   
