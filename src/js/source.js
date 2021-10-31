@@ -21,25 +21,27 @@ let secondNumber = prompt('Ввидите второе число')
 
 
 function Calc(operator, a, b) {
-    if ( a == "" || b == "" || typeof(a) != 'number' || typeof(b) != 'number' ){
+    const ifCheckNumber =  (a === "" || b === "" || typeof(a) != 'number' || typeof(b) != 'number')
+
+    if (ifCheckNunber ){
         return "Error"
     } 
-    else if(operator =="+"){
+    else if(operator ==="+"){
         return a + b  
     }  
-    else if(operator =="-"){
+    else if(operator ==="-"){
         return a - b       
     }
-    else if(operator =="*"){
+    else if(operator ==="*"){
         return a * b
     }
-    else if(operator =="/"){
+    else if(operator ==="/"){
         return a / b
     } 
-    else if(operator =="**"){
+    else if(operator ==="**"){
         return Math.pow(a, b)
     }  
-    else if(operator =="%"){
+    else if(operator ==="%"){
         return a % b
     }  
     else{
