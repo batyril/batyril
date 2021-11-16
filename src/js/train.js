@@ -31,30 +31,6 @@ function changeStatus(task,status){
    console.log('Value not found, please try again')
 }
 
-function showList(array){
-
-  console.log("to do:")
-  for(let i of list ){
-      if(i.status === 'to do'){
-          console.log('-' + i.name)
-      }
-    }
-
-  console.log("Done:")
-  for(let i of list ){
-      if(i.status === 'Done'){
-          console.log('-' + i.name)
-      }
-    }
-  
-  console.log("In Progress:")
-  for(let i of list ){
-      if(i.status === 'In Progress'){
-          console.log('-' + i.name)
-      }
-    }  
-}
-
 function addTask(task){
   
   let isId = (list[list.length - 1]).id
@@ -102,7 +78,7 @@ function showList(array, filter){
   return    
   } 
   
-  else if(filter === 'priority:'  ){
+  else if(filter === 'priority'  ){
     console.log("high:")
     for(let i of list ){
         if(i.priority === 'high'){
@@ -123,7 +99,18 @@ function showList(array, filter){
   console.log('Value not found, please try again')
 }
 
-showList(list, 'stat3us')
+changeStatus('create a post','Done');
+changeStatus('crea423te a post','Done');
+
+addTask('have a walk');
+
+deleteTask('create a post');
+deleteTask(435);
+
+showList(list, 'status');
+showList(list, 'priority');
+showList(list, 'prior234ity');
+
 
 console.log(list)
 
